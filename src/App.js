@@ -1,4 +1,4 @@
-import logo from './logo.svg';
+
 import './App.css';
 import { useState } from 'react';
 import '@fortawesome/fontawesome-free/css/all.min.css';
@@ -32,7 +32,7 @@ function App() {
 
   const handleSubmit=(e)=>{
     e.preventDefault();
-    if(formData.task.trim()=='')
+    if(formData.task.trim()==='')
        {
         setError('Task should not be empty');
         return;
@@ -55,13 +55,7 @@ function App() {
         }
       return task;
     });
-    const newlist=updatedTaskList.map((task)=>{
-      if(task.id===id)
-        {
-        return {...task,completed:!task.completed};
-        }
-      return task;
-    });
+    
     setTaskList(newtasklist);
     if(categories!=='All')
       {
