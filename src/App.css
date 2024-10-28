@@ -12,7 +12,50 @@
     animation: App-logo-spin infinite 20s linear;
   }
 }
-
+.btn-container {
+  margin-bottom: 4rem;
+  display: flex;
+  justify-content: center;
+  
+}
+.table-header{
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  align-items: center;
+  background-color: #20c997;
+  padding: 10px 0;
+  width: 40%;
+  text-align: center;
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+  text-transform: uppercase;
+}
+.table-header:hover {
+  background-color: #1da67a; /* Darker teal on hover */
+}
+.table-row{
+  display: grid;
+  grid-template-columns: 1.1fr 2fr 1fr;
+  align-items: center;
+  padding: 10px 0;
+  width: 40%;
+  text-align: center;
+  border-radius: 10px;
+  transition: border-color 0.3s,background-color 0.3s,box-shadow 0.3s;
+}
+.table-row.completed {
+  border-color: #388e3c;
+  background: linear-gradient(to right,#4caf50, #81c784); ;/* Light green background for completed tasks */
+  border-width: 2px;
+  border-style:solid;
+  color: white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+.task-description{
+  flex: 1; /* Allow the task description to take up available space */
+  overflow: auto; 
+  white-space: normal; /* Allow normal wrapping of text */
+}
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -23,7 +66,43 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
-
+.filter-btn {
+  background: transparent;
+  border-color: transparent;
+  font-size: 1rem;
+  text-transform: capitalize;
+  margin: 0 0.5rem;
+  letter-spacing: 1px;
+  padding: 0.375rem 0.75rem;
+  color:  #c59d5f;
+  cursor: pointer;
+  transition: all 0.3s linear;
+  border-radius: 0.25rem;
+}
+.task-btn {
+   background: black; 
+  border-color: transparent;
+  font-size: 1rem;
+  text-transform: capitalize;
+  margin: 0 0.5rem;
+  letter-spacing: 1px;
+  padding: 0.375rem 0.75rem;
+  color:  white;
+  cursor: pointer;
+  transition: all 0.3s linear;
+  border-radius: 0.25rem;
+}
+.filter-btn:hover {
+  background:  #c59d5f;
+  color:  #fff;
+}
+.filter-btn.selected{
+  background:  #c59d5f;
+  color:  #fff;
+}
+.new-task{
+  justify-content: center;
+}
 .App-link {
   color: #61dafb;
 }
